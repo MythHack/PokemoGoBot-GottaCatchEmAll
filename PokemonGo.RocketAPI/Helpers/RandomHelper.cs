@@ -1,10 +1,6 @@
-﻿#region
-
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-
-#endregion
 
 namespace PokemonGo.RocketAPI.Helpers
 {
@@ -18,7 +14,7 @@ namespace PokemonGo.RocketAPI.Helpers
             Random.NextBytes(buf);
             var longRand = BitConverter.ToInt64(buf, 0);
 
-            return Math.Abs(longRand%(max - min)) + min;
+            return Math.Abs(longRand % (max - min)) + min;
         }
 
         public static async Task RandomDelay(int maxDelay = 5000)

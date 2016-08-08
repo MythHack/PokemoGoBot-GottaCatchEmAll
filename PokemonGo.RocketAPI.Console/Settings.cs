@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using PokemonGo.RocketAPI.Enums;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo.RocketAPI.Logging;
-
+using POGOProtos.Enums;
+using POGOProtos.Inventory.Item;
 
 #endregion
 
@@ -16,7 +16,7 @@ namespace PokemonGo.RocketAPI.Console
 {
     public class Settings : ISettings
     {
-        private readonly string _configsPath = Path.Combine(Directory.GetCurrentDirectory(), "Settings");
+        public readonly string ConfigsPath = Path.Combine(Directory.GetCurrentDirectory(), "Settings");
 
         public AuthType AuthType => (AuthType)Enum.Parse(typeof(AuthType), UserSettings.Default.AuthType, true);
         public string PtcUsername => UserSettings.Default.PtcUsername;
@@ -29,7 +29,6 @@ namespace PokemonGo.RocketAPI.Console
         public bool UseGPXPathing => UserSettings.Default.UseGPXPathing;
         public string GPXFile => UserSettings.Default.GPXFile;
         public bool GPXIgnorePokestops => UserSettings.Default.GPXIgnorePokestops;
-        public bool GPXIgnorePokemon => UserSettings.Default.GPXIgnorePokemon;
 
         public double WalkingSpeedInKilometerPerHour => UserSettings.Default.WalkingSpeedInKilometerPerHour;
         public int MaxTravelDistanceInMeters => UserSettings.Default.MaxTravelDistanceInMeters;
@@ -37,6 +36,10 @@ namespace PokemonGo.RocketAPI.Console
 
         public bool UsePokemonToNotCatchList => UserSettings.Default.UsePokemonToNotCatchList;
         public bool UsePokemonToNotTransferList => UserSettings.Default.UsePokemonToNotTransferList;
+        public bool UsePokemonToEvolveList => UserSettings.Default.UsePokemonToEvolveList;
+
+        public bool CatchPokemon => UserSettings.Default.CatchPokemon;
+
         public bool EvolvePokemon => UserSettings.Default.EvolvePokemon;
         public bool EvolveOnlyPokemonAboveIV => UserSettings.Default.EvolveOnlyPokemonAboveIV;
         public float EvolveOnlyPokemonAboveIVValue => UserSettings.Default.EvolveOnlyPokemonAboveIVValue;
@@ -119,7 +122,7 @@ namespace PokemonGo.RocketAPI.Console
             {
                 //Type of pokemons not to transfer
                 var defaultPokemon = new List<PokemonId> {
-                    PokemonId.Dragonite, PokemonId.Charizard, PokemonId.Zapdos, PokemonId.Snorlax, PokemonId.Alakazam, PokemonId.Mew, PokemonId.Mewtwo
+                    PokemonId.Farfetchd, PokemonId.Kangaskhan, PokemonId.Tauros, PokemonId.MrMime , PokemonId.Dragonite, PokemonId.Charizard, PokemonId.Zapdos, PokemonId.Snorlax, PokemonId.Alakazam, PokemonId.Mew, PokemonId.Mewtwo
                 };
                 _pokemonsToNotTransfer = _pokemonsToNotTransfer ?? LoadPokemonList("PokemonsToNotTransfer.ini", defaultPokemon);
                 return _pokemonsToNotTransfer;
@@ -142,9 +145,9 @@ namespace PokemonGo.RocketAPI.Console
         private ICollection<PokemonId> LoadPokemonList(string filename, List<PokemonId> defaultPokemon)
         {
             ICollection<PokemonId> result = new List<PokemonId>();
-            if (!Directory.Exists(_configsPath))
-                Directory.CreateDirectory(_configsPath);
-            var pokemonlistFile = Path.Combine(_configsPath, filename);
+            if (!Directory.Exists(ConfigsPath))
+                Directory.CreateDirectory(ConfigsPath);
+            var pokemonlistFile = Path.Combine(ConfigsPath, filename);
             if (!File.Exists(pokemonlistFile))
             {
                 Logger.Write($"Settings File: \"{filename}\" not found, creating new...", LogLevel.Warning);

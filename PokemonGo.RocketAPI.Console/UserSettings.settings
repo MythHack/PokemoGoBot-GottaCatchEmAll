@@ -6,13 +6,13 @@
       <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="TransferPokemonKeepAboveIVPercentage" Type="System.Single" Scope="User">
-      <Value Profile="(Default)">99</Value>
+      <Value Profile="(Default)">95</Value>
     </Setting>
     <Setting Name="TransferPokemonKeepAboveCP" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2000</Value>
     </Setting>
     <Setting Name="WalkingSpeedInKilometerPerHour" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">150</Value>
+      <Value Profile="(Default)">50</Value>
     </Setting>
     <Setting Name="DefaultLatitude" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
@@ -24,7 +24,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="AuthType" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Google</Value>
+      <Value Profile="(Default)">Ptc</Value>
     </Setting>
     <Setting Name="PtcUsername" Type="System.String" Scope="User">
       <Value Profile="(Default)">PtcUsername</Value>
@@ -83,8 +83,8 @@
     <Setting Name="GooglePassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">GooglePassword</Value>
     </Setting>
-    <Setting Name="GPXIgnorePokemon" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+    <Setting Name="CatchPokemon" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="GPXIgnorePokestops" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -96,6 +96,9 @@
       <Value Profile="(Default)">200</Value>
     </Setting>
     <Setting Name="UseTeleportInsteadOfWalking" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UsePokemonToEvolveList" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>

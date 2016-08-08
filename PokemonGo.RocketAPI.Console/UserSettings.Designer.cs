@@ -37,7 +37,7 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("99")]
+        [global::System.Configuration.DefaultSettingValueAttribute("95")]
         public float TransferPokemonKeepAboveIVPercentage {
             get {
                 return ((float)(this["TransferPokemonKeepAboveIVPercentage"]));
@@ -61,7 +61,7 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("150")]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
         public double WalkingSpeedInKilometerPerHour {
             get {
                 return ((double)(this["WalkingSpeedInKilometerPerHour"]));
@@ -109,7 +109,7 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Google")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Ptc")]
         public string AuthType {
             get {
                 return ((string)(this["AuthType"]));
@@ -349,13 +349,13 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool GPXIgnorePokemon {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CatchPokemon {
             get {
-                return ((bool)(this["GPXIgnorePokemon"]));
+                return ((bool)(this["CatchPokemon"]));
             }
             set {
-                this["GPXIgnorePokemon"] = value;
+                this["CatchPokemon"] = value;
             }
         }
         
@@ -397,13 +397,25 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseTeleportInsteadOfWalking {
             get {
                 return ((bool)(this["UseTeleportInsteadOfWalking"]));
             }
             set {
                 this["UseTeleportInsteadOfWalking"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool UsePokemonToEvolveList {
+            get {
+                return ((bool)(this["UsePokemonToEvolveList"]));
+            }
+            set {
+                this["UsePokemonToEvolveList"] = value;
             }
         }
     }

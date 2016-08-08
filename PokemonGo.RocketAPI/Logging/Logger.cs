@@ -24,7 +24,7 @@ namespace PokemonGo.RocketAPI.Logging
         /// Set the logger. All future requests to <see cref="Write(string,LogLevel,ConsoleColor)"/> will use that logger, any old will be unset.
         /// </summary>
         public static void SetLogger()
-		{
+        {
             if (!Directory.Exists(Path))
             {
                 Directory.CreateDirectory(Path);

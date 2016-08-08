@@ -1,13 +1,22 @@
 <!-- define warning icon -->
 [1.1]: http://i.imgur.com/M4fJ65n.png (ATTENTION)
 [1.2]: http://i.imgur.com/NNcGs1n.png (BTC)
+[1.3]: http://i.epvpimg.com/ZTsdb.png (SCREENSHOT)
 <!-- title -->
 <h1>A Pokemon Go Bot based on FeroxRevs API</h1>
 <!-- disclaimer -->
-![alt text][1.1] <strong><em> The contents of this repo are a proof of concept and are for educational use only </em></strong>![alt text][1.1]
-![](https://github.com/Spegeli/Pokemon-Go-Rocket-API/blob/master/Screenshot.png)
-Chatting about this Repository can be done on our Discord: https://discord.gg/nJNh2PM <br/>
+![alt text][1.1]<strong><em> The contents of this repo are a proof of concept and are for educational use only </em></strong>![alt text][1.1]<br />
+<br />
+Chatting about this Repository can be done on our Discord: https://discord.gg/KzJUjDE <br/>
 <br/>
+<strong><em>UPDATE (8/7/2016)</em></strong> - Back online!<br />
+<br />
+In order for the bot to function. You will need to supply a encrypt.dll file. Due to to legal reasons, We will not supply this file. <br/>
+The dll needs to be placed within the folder:<br/>
+PokemoGoBot-GottaCatchEmAll-master\PokemonGo.RocketAPI.Console\bin\Debug<br/>
+<br/>
+The file is not hard to find and any questions about this or other common items can be found within our Discord community in the channel #readme<br/>
+<br />
 
 <h2><a name="features">Features</a></h2>
  
@@ -52,9 +61,8 @@ Chatting about this Repository can be done on our Discord: https://discord.gg/nJ
  - and many more ;-)
 <br/>
 
-<h2><a name="screenshots">Screenshots</a></h2><br/>
-- coming soon -<br/>
-<hr/>
+<h2><a name="screenshots">Screenshots</a></h2>
+![alt text][1.3]
 <br/>
 
 <h2><a name="getting-started">Getting Started</a></h2>
@@ -67,11 +75,5 @@ A big thank you goes to Feroxs' hard work on the API & Console. Without him, thi
 Thanks to everyone who volunteered by contributing via Pull Requests!
 
 <h2><a name="donating">Donating</a></h2>
-<a name="paypal">Feel free to buy us all a beer, by using PayPal:</a><br/>
-[![](http://i.epvpimg.com/vI2ch.gif)](https://www.paypal.me/MoneyForSpegeli) OR 
-[![](http://i.epvpimg.com/vI2ch.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YE3KBU2RGZYPY) <br/>
-
-<h6><em>[ All PayPal donations are distributed amongst our most active collaborators. ]</em></h6><br/>
-<a name="btc">Donate Bitcoins to FeroxRev (the API library developer): *1ExYxfBb5cERHyAfqtFscJW7vm2vWBbL3e*</a><br/>
-
+<a name="Donating">All infos about how you can do a donate can you find in the [Wiki](https://github.com/Spegeli/PokemoGoBot-GottaCatchEmAll/wiki/Donations#donating)</a><br/>
 <hr/>
